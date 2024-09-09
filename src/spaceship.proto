@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+message Person {
+  string name = 1;
+  string surname = 2;
+  string rank = 3;
+}
+
+message Spaceship {
+  enum Alignment {
+    ALLY = 0;
+    ENEMY = 1;
+  }
+  enum Class {
+    Corvette = 0;
+    Frigate = 1;
+    Cruiser = 2;
+    Destroyer = 3;
+    Carrier = 4;
+    Dreadnought = 5;
+  }
+  Alignment alignment = 1;
+  string name = 2;
+  float length = 3;
+  Class class_of_spaceship = 4;
+  int32 size = 5;
+  bool status = 6;
+  repeated Person officers = 7;
+}
+
+message Coordinates {
+  // galactic longitude
+  double longitude_degrees = 1;
+  double longitude_minutes = 2;
+  double longitude_seconds = 3;
+
+  // galactic latitude
+  double latitude_degrees = 4;
+  double latitude_minutes = 5;
+  double latitude_seconds = 6;
+}
+
+service Service { rpc SpaceServer(Coordinates) returns (stream Spaceship); }

@@ -15,6 +15,12 @@ This project is designed to manage spaceship data and their crew members. It inv
 - **Python script client.py:** Receives the sent `Spaceship` objects, validates the information about the ships, and inserts it into the database. All actions are detailed in the "Usage" section.
 
 ## Setup
+
+You can also use Makefile to skip all below steps: 
+```sh
+make all
+```
+
 Install the required Python packages using pip:
 ```sh
 pip install -r requirements.txt

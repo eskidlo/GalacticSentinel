@@ -72,7 +72,7 @@ class DB_info(BaseModel):
 
     def make_url(self) -> str:
         url = f"postgresql+psycopg2://{self.DB_USER}:{
-            self.DB_PASS}@{self.DB_HOST}/{self.DB_NAME}"
+            self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
         return url
 
 

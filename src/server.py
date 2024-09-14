@@ -58,7 +58,7 @@ class SpaceServer(spaceship_pb2_grpc.ServiceServicer):
         return spaceship
 
     def SpaceServer(self, request: spaceship_pb2.Coordinates, context: any) -> Generator[spaceship_pb2.Spaceship, None, None]:
-        for _ in range(random.randint(1, 10)):
+        for _ in range(random.randint(30, 50)):
             spaceship: spaceship_pb2.Spaceship = self.__randomizer()
             yield spaceship
 

@@ -5,3 +5,5 @@ setuptools
 sqlalchemy
 psycopg2
 postgres
+python-dotenv
+pydantic

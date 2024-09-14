@@ -21,7 +21,7 @@ Run the following command:
 make all
 ```
 
-##Stop
+## Stop
 
 Run the following command:
 ```sh

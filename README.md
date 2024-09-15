@@ -17,6 +17,7 @@ This project is designed to manage spaceship data and their crew members. It inv
 ## Setup
 
 Run the following command:
+Please, make sure that Docker daemon is up.
 ```sh
 make all
 ```
